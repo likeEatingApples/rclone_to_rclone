@@ -1,4 +1,4 @@
-name: AutoDownloader
+name: rclone_to_rclone
 on:
   workflow_dispatch
 jobs:
@@ -9,7 +9,7 @@ jobs:
     - name: Rclone Install
       run: curl https://rclone.org/install.sh | sudo bash
 
-    - name: Inject Rclone&Aria2 config
+    - name: Inject Rclone
       run: |
         mkdir -p ~/.config/rclone/
         cat >  ~/.config/rclone/rclone.conf  << EOF
