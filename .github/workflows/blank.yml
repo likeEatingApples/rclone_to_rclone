@@ -20,6 +20,6 @@ jobs:
 
     - name: Rclone Synchronizing file
       run: |
-        rclone copy ${{ secrets.S}} ${{ secrets.D}} -P --bwlimit 20M --transfers 4
+        rclone sync ${{ secrets.S}} ${{ secrets.D}} -P --bwlimit 20M --transfers 4
 
 
